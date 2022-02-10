@@ -1,0 +1,187 @@
+2021-12-28 21:41:38.352 ---  *** Starting program geogrid.exe ***
+2021-12-28 21:41:38.400 --- Using the following namelist variables:
+2021-12-28 21:41:38.400 --- &SHARE
+2021-12-28 21:41:38.400 ---   WRF_CORE         = ARW
+2021-12-28 21:41:38.401 ---   MAX_DOM          = 1
+2021-12-28 21:41:38.401 ---   START_YEAR       = 0
+2021-12-28 21:41:38.401 ---   START_MONTH      = 0
+2021-12-28 21:41:38.401 ---   START_DAY        = 0
+2021-12-28 21:41:38.401 ---   START_HOUR       = 0
+2021-12-28 21:41:38.401 ---   START_MINUTE     = 0
+2021-12-28 21:41:38.401 ---   START_SECOND     = 0
+2021-12-28 21:41:38.401 ---   END_YEAR         = 0
+2021-12-28 21:41:38.401 ---   END_MONTH        = 0
+2021-12-28 21:41:38.401 ---   END_DAY          = 0
+2021-12-28 21:41:38.401 ---   END_HOUR         = 0
+2021-12-28 21:41:38.401 ---   END_MINUTE       = 0
+2021-12-28 21:41:38.401 ---   END_SECOND       = 0
+2021-12-28 21:41:38.401 ---   START_DATE       = 2017-12-31_12:00:00
+2021-12-28 21:41:38.401 ---   END_DATE         = 2018-01-02_06:00:00
+2021-12-28 21:41:38.401 ---   INTERVAL_SECONDS = 10800
+2021-12-28 21:41:38.401 ---   IO_FORM_GEOGRID  = 2
+2021-12-28 21:41:38.401 ---   OPT_OUTPUT_FROM_GEOGRID_PATH = ./
+2021-12-28 21:41:38.401 ---   SUBGRID_RATIO_X  = 1
+2021-12-28 21:41:38.401 ---   SUBGRID_RATIO_Y  = 1
+2021-12-28 21:41:38.401 ---   DEBUG_LEVEL      = 0
+2021-12-28 21:41:38.401 ---   ACTIVE_GRID      = .TRUE.
+2021-12-28 21:41:38.401 ---   NOCOLONS         = .FALSE.
+2021-12-28 21:41:38.401 --- /
+2021-12-28 21:41:38.401 --- &GEOGRID
+2021-12-28 21:41:38.401 ---   PARENT_ID         = 1
+2021-12-28 21:41:38.401 ---   PARENT_GRID_RATIO = 1
+2021-12-28 21:41:38.401 ---   I_PARENT_START    = 1
+2021-12-28 21:41:38.401 ---   J_PARENT_START    = 1
+2021-12-28 21:41:38.401 ---   S_WE              = 1
+2021-12-28 21:41:38.401 ---   E_WE              = 600
+2021-12-28 21:41:38.401 ---   S_SN              = 1
+2021-12-28 21:41:38.401 ---   E_SN              = 354
+2021-12-28 21:41:38.401 ---   GEOG_DATA_RES     = usgs_30s
+2021-12-28 21:41:38.401 ---   DX                = 9000.000000
+2021-12-28 21:41:38.401 ---   DY                = 9000.000000
+2021-12-28 21:41:38.401 ---   MAP_PROJ          = lambert
+2021-12-28 21:41:38.401 ---   POLE_LAT          = 90.000000
+2021-12-28 21:41:38.401 ---   POLE_LON          = 0.000000
+2021-12-28 21:41:38.401 ---   REF_LAT           = 38.500000
+2021-12-28 21:41:38.401 ---   REF_LON           = -97.500000
+2021-12-28 21:41:38.401 ---   REF_X             = 100000002004087734272.000000
+2021-12-28 21:41:38.401 ---   REF_Y             = 100000002004087734272.000000
+2021-12-28 21:41:38.401 ---   TRUELAT1          = 38.500000
+2021-12-28 21:41:38.401 ---   TRUELAT2          = 38.500000
+2021-12-28 21:41:38.401 ---   STAND_LON         = -97.500000
+2021-12-28 21:41:38.401 ---   GEOG_DATA_PATH    = /projects/cloud/xinzhou/wps_geog
+2021-12-28 21:41:38.401 ---   OPT_GEOGRID_TBL_PATH = geogrid/
+2021-12-28 21:41:38.401 --- /
+2021-12-28 21:41:38.463 --- Processing domain 1 of 1
+2021-12-28 21:41:38.463 --- INFORM: For HGT_M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.463 --- INFORM: Using default interpolator sequence for HGT_M.
+2021-12-28 21:41:38.463 --- INFORM: For HGT_M, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.463 --- INFORM: Using default data source for HGT_M.
+2021-12-28 21:41:38.494 --- INFORM: Using usgs_30s interpolator sequence for LANDUSEF.
+2021-12-28 21:41:38.494 --- INFORM: Using usgs_30s data source for LANDUSEF.
+2021-12-28 21:41:38.555 --- INFORM: For SOILTEMP, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.555 --- INFORM: Using default interpolator sequence for SOILTEMP.
+2021-12-28 21:41:38.555 --- INFORM: For SOILTEMP, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.555 --- INFORM: Using default data source for SOILTEMP.
+2021-12-28 21:41:38.593 --- INFORM: For SOILCTOP, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.593 --- INFORM: Using default interpolator sequence for SOILCTOP.
+2021-12-28 21:41:38.593 --- INFORM: For SOILCTOP, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.593 --- INFORM: Using default data source for SOILCTOP.
+2021-12-28 21:41:38.642 --- INFORM: For SOILCBOT, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.642 --- INFORM: Using default interpolator sequence for SOILCBOT.
+2021-12-28 21:41:38.642 --- INFORM: For SOILCBOT, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.642 --- INFORM: Using default data source for SOILCBOT.
+2021-12-28 21:41:38.688 --- INFORM: For ALBEDO12M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.688 --- INFORM: Using default interpolator sequence for ALBEDO12M.
+2021-12-28 21:41:38.688 --- INFORM: For ALBEDO12M, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.688 --- INFORM: Using default data source for ALBEDO12M.
+2021-12-28 21:41:38.747 --- INFORM: For GREENFRAC, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.747 --- INFORM: Using default interpolator sequence for GREENFRAC.
+2021-12-28 21:41:38.747 --- INFORM: For GREENFRAC, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.747 --- INFORM: Using default data source for GREENFRAC.
+2021-12-28 21:41:38.809 --- INFORM: For LAI12M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.810 --- INFORM: Using default interpolator sequence for LAI12M.
+2021-12-28 21:41:38.810 --- INFORM: For LAI12M, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.810 --- INFORM: Using default data source for LAI12M.
+2021-12-28 21:41:38.836 --- INFORM: For SNOALB, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.836 --- INFORM: Using default interpolator sequence for SNOALB.
+2021-12-28 21:41:38.836 --- INFORM: For SNOALB, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.836 --- INFORM: Using default data source for SNOALB.
+2021-12-28 21:41:38.897 --- INFORM: For CON, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.897 --- INFORM: Using default interpolator sequence for CON.
+2021-12-28 21:41:38.897 --- INFORM: For CON, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.897 --- INFORM: Using default data source for CON.
+2021-12-28 21:41:38.942 --- INFORM: For VAR, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:38.942 --- INFORM: Using default interpolator sequence for VAR.
+2021-12-28 21:41:38.942 --- INFORM: For VAR, couldn't find usgs_30s data source.
+2021-12-28 21:41:38.942 --- INFORM: Using default data source for VAR.
+2021-12-28 21:41:39.006 --- INFORM: For OA1, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.006 --- INFORM: Using default interpolator sequence for OA1.
+2021-12-28 21:41:39.006 --- INFORM: For OA1, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.006 --- INFORM: Using default data source for OA1.
+2021-12-28 21:41:39.059 --- INFORM: For OA2, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.059 --- INFORM: Using default interpolator sequence for OA2.
+2021-12-28 21:41:39.059 --- INFORM: For OA2, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.059 --- INFORM: Using default data source for OA2.
+2021-12-28 21:41:39.088 --- INFORM: For OA3, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.088 --- INFORM: Using default interpolator sequence for OA3.
+2021-12-28 21:41:39.088 --- INFORM: For OA3, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.089 --- INFORM: Using default data source for OA3.
+2021-12-28 21:41:39.152 --- INFORM: For OA4, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.152 --- INFORM: Using default interpolator sequence for OA4.
+2021-12-28 21:41:39.152 --- INFORM: For OA4, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.152 --- INFORM: Using default data source for OA4.
+2021-12-28 21:41:39.181 --- INFORM: For OL1, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.181 --- INFORM: Using default interpolator sequence for OL1.
+2021-12-28 21:41:39.181 --- INFORM: For OL1, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.181 --- INFORM: Using default data source for OL1.
+2021-12-28 21:41:39.208 --- INFORM: For OL2, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.208 --- INFORM: Using default interpolator sequence for OL2.
+2021-12-28 21:41:39.208 --- INFORM: For OL2, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.208 --- INFORM: Using default data source for OL2.
+2021-12-28 21:41:39.299 --- INFORM: For OL3, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.299 --- INFORM: Using default interpolator sequence for OL3.
+2021-12-28 21:41:39.299 --- INFORM: For OL3, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.299 --- INFORM: Using default data source for OL3.
+2021-12-28 21:41:39.345 --- INFORM: For OL4, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.345 --- INFORM: Using default interpolator sequence for OL4.
+2021-12-28 21:41:39.345 --- INFORM: For OL4, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.345 --- INFORM: Using default data source for OL4.
+2021-12-28 21:41:39.391 --- INFORM: For VAR_SSO, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.391 --- INFORM: Using default interpolator sequence for VAR_SSO.
+2021-12-28 21:41:39.391 --- INFORM: For VAR_SSO, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.391 --- INFORM: Using default data source for VAR_SSO.
+2021-12-28 21:41:39.434 --- INFORM: For AOD5502D12M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.434 --- INFORM: Using default interpolator sequence for AOD5502D12M.
+2021-12-28 21:41:39.434 --- INFORM: For AOD5502D12M, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.434 --- INFORM: Using default data source for AOD5502D12M.
+2021-12-28 21:41:39.492 --- INFORM: For ANGEXP2D12M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.492 --- INFORM: Using default interpolator sequence for ANGEXP2D12M.
+2021-12-28 21:41:39.492 --- INFORM: For ANGEXP2D12M, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.492 --- INFORM: Using default data source for ANGEXP2D12M.
+2021-12-28 21:41:39.537 --- INFORM: For AERSSA2D12M, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.537 --- INFORM: Using default interpolator sequence for AERSSA2D12M.
+2021-12-28 21:41:39.537 --- INFORM: For AERSSA2D12M, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.537 --- INFORM: Using default data source for AERSSA2D12M.
+2021-12-28 21:41:39.554 --- INFORM: For LAKE_DEPTH, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.554 --- INFORM: Using default interpolator sequence for LAKE_DEPTH.
+2021-12-28 21:41:39.554 --- INFORM: For LAKE_DEPTH, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.554 --- INFORM: Using default data source for LAKE_DEPTH.
+2021-12-28 21:41:39.629 --- INFORM: For URB_PARAM, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.629 --- INFORM: Using default interpolator sequence for URB_PARAM.
+2021-12-28 21:41:39.629 --- INFORM: For URB_PARAM, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.629 --- INFORM: Using default data source for URB_PARAM.
+2021-12-28 21:41:39.630 --- INFORM: Could not read 'index' file /projects/cloud/xinzhou/wps_geog/NUDAPT44_1km/index for field URB_PARAM
+2021-12-28 21:41:39.630 --- INFORM: This field is optional and will not be processed.
+2021-12-28 21:41:39.630 --- INFORM: For FRC_URB2D, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.630 --- INFORM: Using default interpolator sequence for FRC_URB2D.
+2021-12-28 21:41:39.630 --- INFORM: For FRC_URB2D, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.630 --- INFORM: Using default data source for FRC_URB2D.
+2021-12-28 21:41:39.630 --- INFORM: Could not read 'index' file /projects/cloud/xinzhou/wps_geog/urbfrac_nlcd2011/index for field FRC_URB2D
+2021-12-28 21:41:39.630 --- INFORM: This field is optional and will not be processed.
+2021-12-28 21:41:39.630 --- INFORM: For IMPERV, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.630 --- INFORM: Using default interpolator sequence for IMPERV.
+2021-12-28 21:41:39.630 --- INFORM: For IMPERV, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.630 --- INFORM: Using default data source for IMPERV.
+2021-12-28 21:41:39.630 --- INFORM: Could not read 'index' file /projects/cloud/xinzhou/wps_geog/nlcd2011_imp_ll_9s/index for field IMPERV
+2021-12-28 21:41:39.630 --- INFORM: This field is optional and will not be processed.
+2021-12-28 21:41:39.630 --- INFORM: For CANFRA, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.630 --- INFORM: Using default interpolator sequence for CANFRA.
+2021-12-28 21:41:39.630 --- INFORM: For CANFRA, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.630 --- INFORM: Using default data source for CANFRA.
+2021-12-28 21:41:39.631 --- INFORM: Could not read 'index' file /projects/cloud/xinzhou/wps_geog/nlcd2011_can_ll_9s/index for field CANFRA
+2021-12-28 21:41:39.631 --- INFORM: This field is optional and will not be processed.
+2021-12-28 21:41:39.631 --- INFORM: For EROD, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.631 --- INFORM: Using default interpolator sequence for EROD.
+2021-12-28 21:41:39.631 --- INFORM: For EROD, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.631 --- INFORM: Using default data source for EROD.
+2021-12-28 21:41:39.688 --- INFORM: For CLAYFRAC, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.688 --- INFORM: Using default interpolator sequence for CLAYFRAC.
+2021-12-28 21:41:39.688 --- INFORM: For CLAYFRAC, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.688 --- INFORM: Using default data source for CLAYFRAC.
+2021-12-28 21:41:39.715 --- INFORM: For SANDFRAC, couldn't find interpolator sequence for resolution usgs_30s.
+2021-12-28 21:41:39.715 --- INFORM: Using default interpolator sequence for SANDFRAC.
+2021-12-28 21:41:39.715 --- INFORM: For SANDFRAC, couldn't find usgs_30s data source.
+2021-12-28 21:41:39.715 --- INFORM: Using default data source for SANDFRAC.
+2021-12-28 21:41:40.656 --- Processing field 1 of 30 (LANDUSEF)
+2021-12-28 21:41:51.121 --- Processing field 2 of 30 (LU_INDEX)
+2021-12-28 21:41:51.183 --- Processing field 3 of 30 (HGT_M)
