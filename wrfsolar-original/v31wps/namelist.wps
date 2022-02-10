@@ -1,0 +1,38 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = "2018-02-31_12:00:00",
+ end_date   = '2018-02-02_06:00:00',
+ interval_seconds = 10800,
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,
+ parent_grid_ratio =   1,
+ i_parent_start    =   1,
+ j_parent_start    =   1,
+ e_we              = 600,
+ e_sn              = 354,
+ geog_data_res = '30s',
+ dx = 9000.0,
+ dy = 9000.0,
+ map_proj = 'lambert',
+ ref_lat   =  38.5,
+ ref_lon   =  -97.5,
+ truelat1  =  38.5,
+ truelat2  =  38.5,
+ stand_lon =  -97.5,
+ geog_data_path = '/gscr3/xinz/wps_geog'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'GFS',
+/
+
+&metgrid
+ fg_name = 'GFS'
+ process_only_bdy = 10,
+ constants_name = 'QNWFA_QNIFA_Monthly_GFS'
+/

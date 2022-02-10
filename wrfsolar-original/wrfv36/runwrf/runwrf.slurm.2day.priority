@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --account=cloud              # Where to charge NREL Hours
+#SBATCH --partition=standard         # Name of Partition
+#SBATCH --qos=high                   # priority queue
+#SBATCH --time=02-00:00:00           # up to 2days, [dd-hh:mm:ss]
+##SBATCH --nodes=2                   # num of nodes, autocalcualtes this if just task # is given
+#SBATCH --ntasks=36                  # Request # of CPU cores, # of nodes will be calculated if not specified
+##SBATCH --ntasks-per-node=36        # 18 cores per node 
+#SBATCH --job-name=m03-0531
+##SBATCH --mail-user=xinzhou.sys@gmail.com
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --output=slurm.%j.out        # %j will be replaced with 
+
+cd /scratch/xinzhou/v36-solar/m03-0531/runwrf
+
+srun ./wrf.exe >> runlog       # srun will infer which mpirun to use
+
+

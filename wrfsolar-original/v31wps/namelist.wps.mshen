@@ -1,0 +1,80 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 2,
+ start_date = '2009-05-22_06:00:00', '2009-05-22_06:00:00', 
+ end_date   = '2009-05-24_18:00:00', '2009-05-24_18:00:00', 
+ interval_seconds = 3600,
+ io_form_geogrid = 2,
+ debug_level = 101,
+/
+
+&geogrid
+ parent_id         = 1,1,
+ parent_grid_ratio = 1,3,
+ i_parent_start    = 1,6,
+ j_parent_start    = 1,7,
+ e_we          = 100,220,
+ e_sn          = 104,205,
+ geog_data_res = '2m','2m',
+ dx = 0.05837,
+ dy = 0.058291,
+ map_proj =  'lat-lon',
+ ref_lat   = 37.25,
+ ref_lon   = -97.031,
+ truelat1  = 37.25,
+ truelat2  = 37.25,
+ stand_lon = -97.031,
+ geog_data_path = '/gscr3/mchen/Build_WRF/WPS_GEOG',
+ opt_geogrid_tbl_path = '/gscr3/mchen/Build_WRF/wizard/runs/RACORO/',
+ ref_x = 50.0,
+ ref_y = 52.0,
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+ opt_output_from_metgrid_path = '/gscr3/mchen/Build_WRF/wizard/runs/RACORO/',
+ opt_metgrid_tbl_path = '/gscr3/mchen/Build_WRF/wizard/runs/RACORO/',
+/
+
+&mod_levs
+ press_pa = 201300 , 200100 , 100000 ,
+             95000 ,  90000 ,
+             85000 ,  80000 ,
+             75000 ,  70000 ,
+             65000 ,  60000 ,
+             55000 ,  50000 ,
+             45000 ,  40000 ,
+             35000 ,  30000 ,
+             25000 ,  20000 ,
+             15000 ,  10000 ,
+              5000 ,   1000
+ /
+
+
+&domain_wizard
+ grib_data_path = '/gscr3/mchen/Build_WRF/DATA/NARR/0522-0524',
+ grib_vtable = 'Vtable.NARR',
+ dwiz_name    =RACORO
+ dwiz_desc    =
+ dwiz_user_rect_x1 =1800
+ dwiz_user_rect_y1 =1117
+ dwiz_user_rect_x2 =1935
+ dwiz_user_rect_y2 =1257
+ dwiz_show_political =true
+ dwiz_center_over_gmt =true
+ dwiz_latlon_space_in_deg =10
+ dwiz_latlon_linecolor =-8355712
+ dwiz_map_scale_pct =50.0
+ dwiz_map_vert_scrollbar_pos =836
+ dwiz_map_horiz_scrollbar_pos =1727
+ dwiz_gridpt_dist_km =9.1
+ dwiz_mpi_command =null
+ dwiz_tcvitals =null
+ dwiz_bigmap =Y
+/
