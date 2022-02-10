@@ -39,18 +39,21 @@ control of the processes which are described in the doc "BNL_mp_description".
 
 &physics
 dispers                             = 2   ! 0=ThomA scheme, 1-5=BNL scheme with different epsilon-N relation
-vdis                                = 0.3 ! constant value of relative dispersion used when dispers=1
-turbopt                             = 0   ! option of turblent effect on autoconversion. 0=off, 1=use user specified value of beta_con
-beta_con                            = 1.0E24
-entrmix_opt                         = 3 ! 0=no entrainment-mixing, 1=cumulus, 2=stratocumulus, 3=specified entrmix_a, 4=Xu et al 2021 fitting with on grid RH
-entrmix_a                           = 52   ! parameter a in the entrainment mixing parameterization
-entrRHd_c                           = 0.5  ! [0-1] representing the combination of two RHd calculations. When>1, use the RH on grid for sub-saturated grids instead.
-entrcf_opt                          = 2 ! cloud fractio parameterization used. 2=Xu-Randall 3-para formula
-RHd_ave_opt                         = 0 ! 0=no ave, 1=domain ave, 2=neighboring ave
-bl_mynn_tkebudget                   = 1
-tkediss_opt                         = 2 ! choice of TKE dissipation rate. 0=Andrejczuk 2009, using L_scale (default), 1=Deardorff 1980, 2=from MYNN PBL scheme(bl_mynn_tkebudget=1)
-L_scale_opt                         = 0 ! 0=user specified L_scale, 1=max el_pbl, 2=use pblh
-L_scale                             = 100
+        ! The following 3 parameters works only when "dispers" is non zero
+	vdis                        = 0.3 ! constant value of relative dispersion used when dispers=1
+	turbopt                     = 0   ! option of turblent effect on autoconversion when dispers is non zero. 0=off, 1=use user specified value of beta_con
+	beta_con                    = 1.0E24
+
+entrmix_opt                         = 3    ! 0=no entrainment-mixing, 1=cumulus, 2=stratocumulus, 3=specified entrmix_a, 4=Xu et al 2021 fitting with on grid RH
+        ! The following parameters work only when entrmix_opt is non zero
+	entrmix_a                   = 52   ! parameter a in the entrainment mixing parameterization
+	entrRHd_c                   = 0.5  ! [0-1] representing the combination of two RHd calculations. When>1, use the RH on grid for sub-saturated grids instead.
+	entrcf_opt                  = 2    ! cloud fractio parameterization used. 2=Xu-Randall 3-para formula
+	RHd_ave_opt                 = 0    ! 0=no ave, 1=domain ave, 2=neighboring grids ave
+	tkediss_opt                 = 2    ! choice of TKE dissipation rate. 0=Andrejczuk 2009, using L_scale (default), 1=Deardorff 1980, 2=from MYNN PBL scheme(bl_mynn_tkebudget=1)
+	L_scale_opt                 = 0    ! 0=user specified L_scale, 1=max el_pbl, 2=use pblh
+	L_scale                     = 100
 
 One may refer to the Registry.EM_COMMON for more details about the
-options of a keyword above.
+options of a keyword above. The corresponding process are described
+the doc "BNL_mp_description"
