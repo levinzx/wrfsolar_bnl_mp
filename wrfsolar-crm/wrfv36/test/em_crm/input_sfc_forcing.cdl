@@ -1,0 +1,66 @@
+netcdf input_sfc_forcing {
+dimensions:
+	Time = UNLIMITED ; // (0 currently)
+	DateStrLen = 19 ;
+variables:
+	char Times(Time, DateStrLen) ;
+	float PRE_SH_FLX(Time) ;
+		PRE_SH_FLX:FieldType = 104 ;
+		PRE_SH_FLX:MemoryOrder = "0  " ;
+		PRE_SH_FLX:description = "surface sensible heat flux" ;
+		PRE_SH_FLX:units = "W m-2" ;
+		PRE_SH_FLX:stagger = "" ;
+		PRE_SH_FLX:_FillValue = -999.f ;
+	float PRE_LH_FLX(Time) ;
+		PRE_LH_FLX:FieldType = 104 ;
+		PRE_LH_FLX:MemoryOrder = "0  " ;
+		PRE_LH_FLX:description = "surface latent heat flux" ;
+		PRE_LH_FLX:units = "W m-2" ;
+		PRE_LH_FLX:stagger = "" ;
+		PRE_LH_FLX:_FillValue = -999.f ;
+	float PRE_TSK(Time) ;
+		PRE_TSK:FieldType = 104 ;
+		PRE_TSK:MemoryOrder = "0  " ;
+		PRE_TSK:description = "skin temperature" ;
+		PRE_TSK:units = "K" ;
+		PRE_TSK:stagger = "" ;
+		PRE_TSK:_FillValue = -999.f ;
+	float PRE_ALBEDO(Time) ;
+		PRE_ALBEDO:FieldType = 104 ;
+		PRE_ALBEDO:MemoryOrder = "0  " ;
+		PRE_ALBEDO:description = "albedo" ;
+		PRE_ALBEDO:units = "" ;
+		PRE_ALBEDO:stagger = "" ;
+		PRE_ALBEDO:_FillValue = -999.f ;
+	float PRE_SH_FLX_TEND(Time) ;
+		PRE_SH_FLX_TEND:FieldType = 104 ;
+		PRE_SH_FLX_TEND:MemoryOrder = "0  " ;
+		PRE_SH_FLX_TEND:description = "surface sensible heat flux" ;
+		PRE_SH_FLX_TEND:units = "W m-2 s-1" ;
+		PRE_SH_FLX_TEND:stagger = "" ;
+		PRE_SH_FLX_TEND:_FillValue = -999.f ;
+	float PRE_LH_FLX_TEND(Time) ;
+		PRE_LH_FLX_TEND:FieldType = 104 ;
+		PRE_LH_FLX_TEND:MemoryOrder = "0  " ;
+		PRE_LH_FLX_TEND:description = "surface latent heat flux" ;
+		PRE_LH_FLX_TEND:units = "W m-2 s-1" ;
+		PRE_LH_FLX_TEND:stagger = "" ;
+		PRE_LH_FLX_TEND:_FillValue = -999.f ;
+	float PRE_TSK_TEND(Time) ;
+		PRE_TSK_TEND:FieldType = 104 ;
+		PRE_TSK_TEND:MemoryOrder = "0  " ;
+		PRE_TSK_TEND:description = "skin temperature" ;
+		PRE_TSK_TEND:units = "K s-1" ;
+		PRE_TSK_TEND:stagger = "" ;
+		PRE_TSK_TEND:_FillValue = -999.f ;
+	float PRE_ALBEDO_TEND(Time) ;
+		PRE_ALBEDO_TEND:FieldType = 104 ;
+		PRE_ALBEDO_TEND:MemoryOrder = "0  " ;
+		PRE_ALBEDO_TEND:description = "albedo" ;
+		PRE_ALBEDO_TEND:units = "" ;
+		PRE_ALBEDO_TEND:stagger = "" ;
+		PRE_ALBEDO_TEND:_FillValue = -999.f ;
+
+// global attributes:
+		:TITLE = "AUXILIARY FORCING FOR CRM" ;
+}

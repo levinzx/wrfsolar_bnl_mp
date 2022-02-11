@@ -1,0 +1,120 @@
+------------------------------------------------------
+              ideal case em_crm 
+------------------------------------------------------
+
+The em_crm test case is configured for cloud-resolving, 
+large eddy, or single column simulations with prescribed 
+surface and large-scale forcings. This version includes 
+a modified Morrison scheme with time-varying multimodal 
+aerosol size distribution profile, hygroscopicity, and
+runtime statistics of diagnostic quantities. 
+
+sendo at bnl.gov
+
+------------------------------------------------------
+
+Initialization scheme: 
+dyn_em/module_initialize_crm.F
+
+Forcing scheme: 
+dyn_em/module_force_crm.F
+
+Runtime diagnostics:
+phys/module_crm_stat.F
+
+Additional physics: 
+phy/module_crm_phy.F
+
+Additional registry:
+Registry.crm
+
+------------------------------------------------------
+
+Compile:
+
+./compile em_crm 
+
+------------------------------------------------------
+
+Additional namelist configuration
+
+&time_control
+ io_form_auxinput6    = 2,   ! large-scale (LS) forcing file in NetCDF format
+ auxinput6_inname     = "input_ls_forcing.nc", ! LS forcing file
+ auxinput6_interval_m = 30,  ! time interval of LS forcig data
+ io_form_auxinput7    = 2,   ! surface forcing file in NetCDF format
+ auxinput7_inname     = "input_sfc_forcing.nc", ! surface forcing file
+ auxinput7_interval_m = 30,  ! time interval of surface forcing data
+ io_form_auxinput8    = 2,   ! aerosol file in NetCDF format
+ auxinput8_inname     = "input_aer.nc", ! aerosol file
+ auxinput8_interval_m = 5,   ! time interval of aerosol data 
+/
+							     
+&physics
+ mp_physics            = 10, ! Modified Morrison double moment scheme
+ ra_sw_physics         = 0,  ! 40: CGILS RRTMG radiation (not in this version)
+ ra_lw_physics         = 55, ! 40: CGILS RRTMG radiation (not in this version)
+                             ! 55: simple longwave radiation
+ isfflx                = 10, ! 10: use flux from crm forcing and
+                             !     drag from tke_drag_coefficient	     
+                             ! 11: use flux from crm forcing and
+                             !     drag from sf_sfclay_physics
+/
+
+&crm
+ &crm
+ crm_zsfc              = 0.0,   ! ASL of model surface (m)		      
+ crm_lat               = 36.6,	! crm latitude (degree)		      
+ crm_lon               = -97.5,	! crm longitude 			      
+ crm_stretch           = 2,	! vertical grid spacing
+                                ! 0: uniform  d(eta) 
+                                ! 1: stretched d(eta)
+                                ! 2: uniform dz 
+                                ! 3: specify by input_zw_grid
+ crm_num_pert_layers   = 10,	! num of layers for initial theta perturbation  
+ crm_pert_amp          = 0.1,	! amplitude of initial theta perturbation (K
+ crm_init_ccn          = 100,	! initial number of CCN for WDM scheme (m-3)
+ crm_lupar_opt         = 1,     ! on-off switch of land use parameter modification
+ crm_znt               = 0.04,  !   roughness length
+ crm_emiss             = 1.0,   !   emissivity
+ crm_thc               = 3.,    !   thermal inertia 
+ crm_mavail            = 0.30,  !   moisture availability
+ crm_force_opt         = 1,     ! on-off switch of LS and surface forcings
+ crm_th_adv_opt        = 1,     !   use LS horizontal advection of theta
+ crm_qv_adv_opt        = 1,     !   use LS horizontal advection of qv
+ crm_th_rlx_opt        = 2,     !   1: use relaxation of theta with tau below
+                                !   2: use relaxation of theta with tau from input file
+ crm_qv_rlx_opt        = 2,     !   1: use relaxation of qv with tau below
+                                !   2: use relaxation of qv with tau in file
+ crm_uv_rlx_opt        = 2,     !   1: use relaxation of u, v with tau below
+                                !   2: use relaxation of u, v with tau from input file
+ crm_vert_adv_opt      = 1,     !   use LS vertical advection
+ crm_wcpa_opt          = 0,     !   use diabatic term
+ crm_num_force_layers  = 751,   !   number of vertical levels for LS forcing 
+ crm_tau_s             = 43200, !   relaxation timescale for scalar
+ crm_tau_m             = 3600,  !   relaxation timescale for momentum
+ crm_flx_opt           = 2,     !   1: constant surface flux
+                                !   2: use flux in file
+ crm_sh_flx            = -16,   !   constant sensible heat flux (W m-2)
+ crm_lh_flx            = -93,   !   constant latent heat flux (W m-2)
+ crm_albedo_opt        = 1,     !   1: constant albedo 
+                                !   2: use albedo from input file
+ crm_albedo            = 0.2,   !   constant albedo 
+ crm_tsk_opt           = 2,     !   1: constant skin temperature 
+                                !   2: use skin temperature from input file
+ crm_tsk               = 400,   !   constant skin temperature
+ crm_ust_opt           = 0,     !   1: constant friction velocity
+                                !   2: use simple friction velocity scheme
+ crm_ust               = 0.25,  !   constant friction velocity
+ crm_init_tke_opt      = 1,     ! initialize TKE
+ crm_init_tke          = 1.0,   ! initial TKE
+ crm_morr_act_opt      = 2,     ! 1: use constant cloud droplet concentration
+                                ! 2: use aerosol size distribution from input file
+ crm_morr_hygro_opt    = 2,     ! 1: use constant aerosol hygroscopicity
+                                ! 2: use aerosol hygroscopicity from input file
+ crm_morr_hygro        = 0.12,  ! constant aerosol hygroscopicity
+ crm_mp_nc             = 100.,  ! constant cloud droplet concentration
+ crm_num_aer_layers    = 321,   ! number of vertical levels for aerosol input
+ crm_stat_opt          = 1,     ! on-off switch of runtime statistics
+ crm_stat_interval_s   = 60.,   ! sampling time interval for runtime statistics
+ /

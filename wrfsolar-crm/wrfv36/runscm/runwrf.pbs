@@ -1,0 +1,23 @@
+#! /bin/bash -f
+
+#PBS -m abe
+#PBS -S /bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=960:00:00
+#PBS -j oe
+#PBS -N homeSCM_VAR0619
+#PBS -o $PBS_JOBID.out
+#PBS -M xinzhou.sys@gmail.com
+
+# End of options
+
+#ulimit -c unlimited
+ulimit -s unlimited
+export OMP_STACKSIZE=2000M
+export MP_STACK_SIZE=2000M
+export OMP_NUM_THREADS=1
+
+which mpirun
+
+cd /home/xinz/solar/suite_solar/scm-solar-crm/runscm
+./wrf.exe >> runlog 2>&1

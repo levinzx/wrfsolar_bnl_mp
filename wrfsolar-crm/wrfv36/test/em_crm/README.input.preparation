@@ -1,0 +1,16 @@
+Follow the steps to prepare the input fields:
+
+1) Modify the large scale forcing in "input_ls_forcing.txt".
+   Read "mk_input_ls_forcing.ncl" for the information about
+   what each column represents.
+
+2) Run "mk_input_ls_forcing.ncl" to create the input of the
+   large scale forcing in NetCDF format.
+
+3) Modify the surface forcing in "input_sfc_forcing.txt".
+   Read "mk_input_sfc_forcing.ncl" for the information of
+   the variables needed
+
+4) Run "mk_input_sfc_forcing.ncl" to create the input of the
+   surface forcing in NetCDF format.
+
